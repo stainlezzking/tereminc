@@ -1,5 +1,12 @@
+import Modal from "@/components/modal";
+
 const Page = () => {
-  return <div>Home ...</div>;
+  return (
+    <div className="h-screen">
+      <p>Home...</p>
+      <Modal />
+    </div>
+  );
 };
 
 export default Page;

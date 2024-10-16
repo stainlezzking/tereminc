@@ -1,6 +1,7 @@
 import { Albert_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
+import { NextUIProvider } from "@nextui-org/react";
 
 const alberSans = Albert_Sans({
   subsets: ["latin"],
@@ -14,8 +15,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={alberSans.className}>
-        <Navbar />
-        {children}
+        <NextUIProvider>
+          <Navbar />
+          {children}
+        </NextUIProvider>
       </body>
     </html>
   );

@@ -24,4 +24,7 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+  .grid-spacing {
+    @apply gap-x-[15px] gap-y-[30px] md:gap-x-[20px] lg:gap-x-[30px];
+  }
 }

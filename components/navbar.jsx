@@ -8,14 +8,15 @@ import "swiper/css/pagination";
 import "swiper/css/autoplay";
 
 import "@/app/custom.css";
+import { useEffect } from "react";
 const onSlideChange = (e) => {
-  console.log("slide change ", e);
+  // console.log("slide change ", e);
 };
 
 const Navbar = () => {
   return (
     <>
-      <div className="bg-white dark:bg-gray-800">
+      <div className="text-black">
         <Wrapper className="flex py-[10px] justify-between  ">
           <span className="">
             <Instagram />
@@ -24,8 +25,8 @@ const Navbar = () => {
           <div>flag and language</div>
         </Wrapper>
       </div>
-      <div className="bg-blue-400 h-screen relative">
-        <nav>
+      <div className="bg-blue-400 aspect-[3/4] sm:aspect-square w-full md:h-screen relative">
+        <nav className="text-white">
           <Wrapper className="absolute top-0 left-0 w-full flex items-center justify-between">
             <div>Logo</div>
             <div>

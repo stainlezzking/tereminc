@@ -2,29 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
   .grid-spacing {
     @apply gap-x-[15px] gap-y-[30px] md:gap-x-[20px] lg:gap-x-[30px];
+  }
+  .footer-title {
+    @apply mt-10 mb-4 xl:mt-0 xl:mb-[30px] text-lg;
   }
 }

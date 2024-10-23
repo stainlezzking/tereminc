@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/navbar";
 import CartItemsContextWrapper from "@/components/context/cartcontext";
 import { Toaster } from "sonner";
+import Footer from "@/components/footer";
 
 const alberSans = Albert_Sans({
   subsets: ["latin"],
@@ -18,7 +19,10 @@ export default function RootLayout({ children }) {
       <body className={" bg-white text-black " + alberSans.className}>
         <Navbar />
         <Toaster />
-        <CartItemsContextWrapper>{children}</CartItemsContextWrapper>
+        <CartItemsContextWrapper>
+          {children}
+          <Footer />
+        </CartItemsContextWrapper>
       </body>
     </html>
   );

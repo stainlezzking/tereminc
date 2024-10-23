@@ -1,4 +1,5 @@
 import BtnLink from "@/components/button/cat-button";
+import OutlineButton from "@/components/button/outline";
 import Categories from "@/components/card/categories";
 import ProductPreview from "@/components/card/product-preview";
 import Wrapper from "@/components/contentwrapper";
@@ -12,7 +13,7 @@ import Link from "next/link";
 const Page = () => {
   // {/* should not be more than two */}
   return (
-    <div className="h-screen">
+    <div>
       <Modal />
       <SlidingText />
       <Wrapper>
@@ -43,7 +44,7 @@ const Page = () => {
           </div>
         </div>
       </Wrapper>
-      <Wrapper className="space-y-[30px] bg-[#f9f6ef] py-10">
+      <Wrapper className="space-y-[30px] bg-[#f9f6ef] py-10 overflow-hidden">
         <div className="text-center space-y-[18px]">
           <Title>Best Seller</Title>
           <p>Shop the Latest Styles: Stay ahead of the curve with our newest arrivals</p>
@@ -52,6 +53,7 @@ const Page = () => {
           {new Array(8).fill(1).map((_, i) => (
             <ProductPreview id={i} src={collectionImage.src} title="Random title" href="" price={100000} cats={["Random", "Random"]} key={i} />
           ))}
+          <OutlineButton href="/products">View All</OutlineButton>
         </div>
       </Wrapper>
     </div>

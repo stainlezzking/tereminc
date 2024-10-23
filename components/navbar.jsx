@@ -1,5 +1,4 @@
 "use client";
-import { Instagram } from "lucide-react";
 import Wrapper from "./contentwrapper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
@@ -9,6 +8,8 @@ import "swiper/css/autoplay";
 
 import "@/app/custom.css";
 import { useEffect } from "react";
+import { InstagramLogoIcon } from "@radix-ui/react-icons";
+import { ShoppingBagIcon, User } from "lucide-react";
 const onSlideChange = (e) => {
   // console.log("slide change ", e);
 };
@@ -19,7 +20,7 @@ const Navbar = () => {
       <div className="text-black">
         <Wrapper className="flex py-[10px] justify-between  ">
           <span className="">
-            <Instagram />
+            <InstagramLogoIcon className="w-6 h-6" />
           </span>
           <div>Slider section</div>
           <div>flag and language</div>
@@ -32,7 +33,10 @@ const Navbar = () => {
             <div>
               <p className="links py-8">navlinks</p>
             </div>
-            <div>wishlist icons</div>
+            <div className="flex gap-x-3 items-center text-black">
+              <User />
+              <ShoppingBagIcon />
+            </div>
           </Wrapper>
         </nav>
         <Swiper

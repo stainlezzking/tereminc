@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import AddToCartButton from "../button/button";
+import AddToCartButton from "../button/addToCartButton";
 
 const ProductPreview = ({ src, title, cats, id, price, href }) => {
   return (

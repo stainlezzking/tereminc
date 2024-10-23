@@ -6,8 +6,9 @@ import Wrapper from "@/components/contentwrapper";
 import Modal from "@/components/modal";
 import SlidingText from "@/components/slidingText";
 import Title from "@/components/title";
+import Subtitle from "@/components/title_sub";
 import collectionImage from "@/images/collections/collection-15.jpg";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Box, ChevronLeft, ChevronRight, CornerDownLeft, CreditCard, Headset } from "lucide-react";
 import Link from "next/link";
 
 const Page = () => {
@@ -16,8 +17,19 @@ const Page = () => {
     <div>
       <Modal />
       <SlidingText />
-      <Wrapper>
-        <div className="py-12 grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 grid-spacing">
+      <Wrapper className="space-y-[15px] xl:space-y-[30px] py-12">
+        <div className="gap-x-[15px] flex items-center">
+          <div className="flex gap-x-[5px]">
+            <button className="border flex text-black/15 items-center justify-center rounded-full w-[30px] h-[30px]">
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+            <button className="border flex items-center justify-center rounded-full w-[30px] h-[30px]">
+              <ChevronRight className="w-5 h-5" />
+            </button>
+          </div>
+          <span className="">SHOP BY CATEGORIES</span>
+        </div>
+        <div className=" grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 grid-spacing">
           <div className="col-span-full md:col-span-2 xl:col-span-3 overflow-hidden">
             <div className="gap-x-[20px] lg:gap-x-[30px] flex flex-nowrap w-full h-full ">
               <Categories src={collectionImage.src} className="w-1/2 xl:w-1/3 shrink-0 relative aspect-[5/6]" title="Random title">
@@ -44,16 +56,53 @@ const Page = () => {
           </div>
         </div>
       </Wrapper>
-      <Wrapper className="space-y-[30px] bg-[#f9f6ef] py-10 overflow-hidden">
-        <div className="text-center space-y-[18px]">
-          <Title>Best Seller</Title>
-          <p>Shop the Latest Styles: Stay ahead of the curve with our newest arrivals</p>
-        </div>
+      <Wrapper className="space-y-[40px] py-10 overflow-hidden">
+        <Subtitle title="Best Seller">Shop the Latest Styles: Stay ahead of the curve with our newest arrivals</Subtitle>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grid-spacing">
           {new Array(8).fill(1).map((_, i) => (
             <ProductPreview id={i} src={collectionImage.src} title="Random title" href="" price={100000} cats={["Random", "Random"]} key={i} />
           ))}
-          <OutlineButton href="/products">View All</OutlineButton>
+          <div className="col-span-full flex justify-center">
+            <OutlineButton href="/products">View All</OutlineButton>
+          </div>
+        </div>
+      </Wrapper>
+
+      <div className="grid grid-cols-2 py-[30px] space-y-[40px]">
+        <div className="col-span-full">
+          <Subtitle title="Shop the look">Inspire and let yourself be inspired, from one unique fashion to another.</Subtitle>
+        </div>
+        <div className="col-span-1 bg-blue-500 aspect-video"></div>
+        <div className="col-span-1 bg-green-500 aspect-video"></div>
+      </div>
+      <Wrapper className="grid grid-cols-2 lg:grid-cols-4 gap-[30px] pb-[50px]">
+        <div className="col-span-1 border rounded-[10px] py-7 px-5 space-y-8">
+          <Box />
+          <div>
+            <h1 className="text-[18px] font-medium"> Free Shipping</h1>
+            <p className="text-sm">Free shipping over order $120</p>
+          </div>
+        </div>
+        <div className="col-span-1 border rounded-[10px] py-7 px-5 space-y-8">
+          <CreditCard />
+          <div>
+            <h1 className="text-[18px] font-medium"> Flexible Payment</h1>
+            <p className="text-sm">Pay with Multiple Credit Cards</p>
+          </div>
+        </div>
+        <div className="col-span-1 border rounded-[10px] py-7 px-5 space-y-8">
+          <CornerDownLeft />
+          <div>
+            <h1 className="text-[18px] font-medium"> 14 Day Returns</h1>
+            <p className="text-sm">Within 30 days for an exchange</p>
+          </div>
+        </div>
+        <div className="col-span-1 border rounded-[10px] py-7 px-5 space-y-8">
+          <Headset />
+          <div>
+            <h1 className="text-[18px] font-medium"> 14 Day Returns</h1>
+            <p className="text-sm">Within 30 days for an exchange</p>
+          </div>
         </div>
       </Wrapper>
     </div>

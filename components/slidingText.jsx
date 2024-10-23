@@ -13,7 +13,7 @@ const TextComp = ({ children }) => {
 
 const SlidingText = () => {
   return (
-    <div className="py-6 md:py-8 bg-[#fcffb2] text-[18px] md:text-2xl">
+    <div className="py-2 sm:py-4 md:py-6 bg-[#fcffb2] text-[18px] md:text-2xl">
       <Marquee pauseOnHover={true}>
         <TextComp>I can be a React component, multiple React components, or just some text.</TextComp>
         <TextComp>A I can be a React component, multiple React components, or just some text.</TextComp>

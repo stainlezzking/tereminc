@@ -11,16 +11,15 @@ const Button = ({ product }) => {
       modifyCart(product, isAdded);
       return setIsAdded(false);
     }
-    modifyCart(product, isAdded);
+    modifyCart({ ...product, quantity: 1 }, isAdded);
     return setIsAdded(true);
   };
   useEffect(
     function () {
-      cart.forEach((item) => {
-        if (item.id === product.id) return setIsAdded(true);
-      });
+      const result = cart.find((item) => item.id === product.id);
+      return setIsAdded(Boolean(result));
     },
-    [isAdded]
+    [isAdded, cart]
   );
 
   return (

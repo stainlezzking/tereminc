@@ -4,6 +4,7 @@ import Categories from "@/components/card/categories";
 import ProductPreview from "@/components/card/product-preview";
 import Wrapper from "@/components/contentwrapper";
 import Modal from "@/components/modal";
+import HomeNavbar from "@/components/navbar/home-navbar";
 import SlidingText from "@/components/slidingText";
 import Title from "@/components/title";
 import Subtitle from "@/components/title_sub";
@@ -11,10 +12,21 @@ import collectionImage from "@/images/collections/collection-15.jpg";
 import { ArrowUpRight, Box, ChevronLeft, ChevronRight, CornerDownLeft, CreditCard, Headset } from "lucide-react";
 import Link from "next/link";
 
+const productSample = {
+  src: collectionImage.src,
+  title: "Random Title",
+  href: "",
+  price: 100000,
+  tags: ["Beauty", "skincare"],
+  stock: 10,
+  min: 1,
+  // this should have a minimum to set minimum value
+};
 const Page = () => {
   // {/* should not be more than two */}
   return (
     <div>
+      <HomeNavbar />
       <Modal />
       <SlidingText />
       <Wrapper className="space-y-[15px] xl:space-y-[30px] py-12">
@@ -60,7 +72,7 @@ const Page = () => {
         <Subtitle title="Best Seller">Shop the Latest Styles: Stay ahead of the curve with our newest arrivals</Subtitle>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grid-spacing">
           {new Array(8).fill(1).map((_, i) => (
-            <ProductPreview id={i} src={collectionImage.src} title="Random title" href="" price={100000} cats={["Random", "Random"]} key={i} />
+            <ProductPreview product={{ ...productSample, id: i }} key={i} />
           ))}
           <div className="col-span-full flex justify-center">
             <OutlineButton href="/products">View All</OutlineButton>
@@ -104,6 +116,12 @@ const Page = () => {
             <p className="text-sm">Within 30 days for an exchange</p>
           </div>
         </div>
+      </Wrapper>
+      <Wrapper className="grid md:grid-cols-2">
+        <div className="col-span-full">
+          <Title>Visit Our Store</Title>
+        </div>
+        <div className="col-span-1"></div>
       </Wrapper>
     </div>
   );

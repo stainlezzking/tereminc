@@ -1,13 +1,14 @@
-import Link from "next/link";
+import { Search, ShoppingBagIcon, User } from "lucide-react";
 import Wrapper from "../contentwrapper";
-import { Search, Sheet, ShoppingBagIcon, User } from "lucide-react";
+import Link from "next/link";
+import { Sheet, SheetTrigger } from "../ui/sheet";
 import Cart from "../cart/cart";
-import { SheetTrigger } from "../ui/sheet";
+import { cn } from "@/lib/utils";
 
-const Navbar = () => {
+const Navbar = ({ className }) => {
   return (
-    <nav className="text-white">
-      <Wrapper className="absolute top-0 left-0 w-full flex items-center justify-between z-10">
+    <nav>
+      <Wrapper className={cn(`text-white top-0 left-0 w-full flex items-center justify-between z-10`, className)}>
         <div>Logo</div>
         <div>
           <p className="links py-8">navlinks</p>

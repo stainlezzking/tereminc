@@ -9,10 +9,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        text: "#545454",
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animate")],
 };

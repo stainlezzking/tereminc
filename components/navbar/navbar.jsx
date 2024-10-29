@@ -1,4 +1,4 @@
-import { Search, ShoppingBagIcon, User } from "lucide-react";
+import { Heart, Search, ShoppingBagIcon, User } from "lucide-react";
 import Wrapper from "../contentwrapper";
 import Link from "next/link";
 import { Sheet, SheetTrigger } from "../ui/sheet";
@@ -13,11 +13,14 @@ const Navbar = ({ className }) => {
         <div>
           <p className="links py-8">navlinks</p>
         </div>
-        <div className="flex gap-x-4 items-center text-black">
+        <div className="flex gap-x-3 items-center text-black">
           <Link href="/" className="cursor-pointer block p-2 bg-white rounded-full">
             <Search className="w-5 h-5" />
           </Link>
-          <Link href="/" className="cursor-pointer block p-2 bg-white rounded-full">
+          <Link href="/wishlist" className="cursor-pointer block p-2 bg-white rounded-full">
+            <Heart className="w-5 h-5  hover:fill-red-600/60" />
+          </Link>
+          <Link href="/auth" className="cursor-pointer block p-2 bg-white rounded-full">
             <User className="w-5 h-5" />
           </Link>
           <Sheet>

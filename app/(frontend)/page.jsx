@@ -11,19 +11,11 @@ import Subtitle from "@/components/title_sub";
 import collectionImage from "@/images/collections/collection-15.jpg";
 import { ArrowUpRight, Box, ChevronLeft, ChevronRight, CornerDownLeft, CreditCard, Headset } from "lucide-react";
 import Link from "next/link";
+import database from "@/database";
 
-const productSample = {
-  src: collectionImage.src,
-  title: "Random Title",
-  href: "",
-  price: 100000,
-  tags: ["Beauty", "skincare"],
-  stock: 10,
-  min: 1,
-  // this should have a minimum to set minimum value
-};
 const Page = () => {
   // {/* should not be more than two */}
+  const productSample = database.slice(0, 8);
   return (
     <div>
       <HomeNavbar />
@@ -71,8 +63,8 @@ const Page = () => {
       <Wrapper className="space-y-[40px] py-10 overflow-hidden">
         <Subtitle title="Best Seller">Shop the Latest Styles: Stay ahead of the curve with our newest arrivals</Subtitle>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grid-spacing">
-          {new Array(8).fill(1).map((_, i) => (
-            <ProductPreview product={{ ...productSample, id: i }} key={i} />
+          {productSample.map((item, i) => (
+            <ProductPreview product={{ ...item, id: i }} key={i} />
           ))}
           <div className="col-span-full flex justify-center">
             <OutlineButton href="/products">View All</OutlineButton>

@@ -31,7 +31,7 @@ const Cart = () => {
               </div>
               <span className="h-1 block w-full bg-[#ebebeb] my-[14px]"></span>
               <div>
-                <Link href="" className="bg-black text-center hover:bg-black/90 text-white text-[14px] py-[10px] px-6 block">
+                <Link href="/checkout" className="bg-black text-center hover:bg-black/90 text-white text-[14px] py-[10px] px-6 block">
                   Checkout
                 </Link>
               </div>

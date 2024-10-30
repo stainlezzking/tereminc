@@ -53,9 +53,7 @@ export function updateQuantityValue(value, id, cart, setCart) {
   for (let i = 0; i < cart.length; i++) {
     if (cart[i].id == id) {
       if (cart[i].min > value || cart[i].stock < value) {
-        cart[i].min > value
-          ? toast.info(`Minimum of this product is ${cart[productIndex].min}`)
-          : toast.info(`Only ${cart[i].stock} stock is available now`);
+        cart[i].min > value ? toast.info(`Minimum of this product is ${cart[i].min}`) : toast.info(`Only ${cart[i].stock} stock is available now`);
         updatedCart = false;
         break;
       }

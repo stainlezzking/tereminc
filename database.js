@@ -7,6 +7,7 @@ const productSample = {
   tags: ["Beauty", "skincare"],
   stock: 10,
   min: 1,
+  // type : [optional] for products with 500ml...
   // this should have a minimum to set minimum value
 };
 

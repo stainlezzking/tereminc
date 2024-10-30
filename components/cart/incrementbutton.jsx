@@ -15,7 +15,7 @@ const AddandSub = ({ quantity, id }) => {
           <Minus />
         </span>
         <input
-          type="number"
+          type="text"
           className="w-[40px] text-center text-[12px] bg-transparent focus:ring-0 h-full flex items-center font-semibold"
           value={quantity}
           onChange={(e) => setQuantity(Number(e.target.value), id)}

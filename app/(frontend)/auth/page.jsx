@@ -13,16 +13,16 @@ const Page = () => {
         <div className="shadow-sm py-10 lg:py-12 px-[15px] lg:px-[30px] rounded-[10px] w-full max-w-[400px] bg-white">
           <nav className="flex justify-between gap-x-2 mb-5">
             <span
-              className={`py-3 cursor-pointer px-5 basis-1/2 flex justify-center hover:bg-black/60 hover:text-white rounded-[5px] ${
-                page1 && "bg-black/90 text-white "
+              className={`py-3 cursor-pointer px-5 basis-1/2 flex justify-center hover:bg-red-500/60 hover:text-white rounded-[5px] ${
+                page1 && "bg-red-700/80 text-white "
               } border`}
               onClick={() => setPage1(true)}
             >
               Sign Up
             </span>
             <span
-              className={`py-3 cursor-pointer px-5 basis-1/2 flex justify-center hover:bg-black/60 hover:text-white rounded-[5px] ${
-                !page1 && "bg-black/90 text-white "
+              className={`py-3 cursor-pointer px-5 basis-1/2 flex justify-center hover:bg-red-500/60 hover:text-white rounded-[5px] ${
+                !page1 && "bg-red-700/80 text-white "
               } border `}
               onClick={() => setPage1(false)}
             >

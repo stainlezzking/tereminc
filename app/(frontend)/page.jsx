@@ -61,7 +61,7 @@ const Page = () => {
         </div>
       </Wrapper>
       <Wrapper className="space-y-[40px] py-10 overflow-hidden">
-        <Subtitle title="Best Seller">Shop the Latest Styles: Stay ahead of the curve with our newest arrivals</Subtitle>
+        <Subtitle title="NEW IN">Shop the Latest Styles: Stay ahead of the curve with our newest arrivals</Subtitle>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grid-spacing">
           {productSample.map((item, i) => (
             <ProductPreview product={{ ...item, id: i }} key={i} />

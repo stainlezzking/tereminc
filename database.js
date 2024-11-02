@@ -4,6 +4,7 @@ const productSample = {
   title: "Random Title",
   href: "",
   price: 100000,
+  category: "Beauty",
   tags: ["Beauty", "skincare"],
   stock: 10,
   min: 1,

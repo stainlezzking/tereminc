@@ -4,7 +4,7 @@ import AddToCartButton from "../button/addToCartButton";
 import Naira from "../svgs/naira";
 
 const ProductPreview = ({ product }) => {
-  const { src, title, tags, id, price, href } = product;
+  const { src, title, tags, id, price } = product;
   return (
     <div className="rounded-[10px] overflow-clip w-full relative bg-white group">
       <div className="w-full aspect-square overflow-hidden">
@@ -18,7 +18,7 @@ const ProductPreview = ({ product }) => {
         />
       </div>
       <div className="py-5 gap-5 text-center ">
-        <Link className="block text-lg" href={href}>
+        <Link className="block text-lg" href={"/products/" + id}>
           {title}
         </Link>
         <span className="bold justify-center text-sm font-bold flex">

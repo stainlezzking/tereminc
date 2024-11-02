@@ -2,8 +2,6 @@
 import Background from "@/components/background";
 import Wrapper from "@/components/contentwrapper";
 import { CartContext } from "@/components/context/cartcontext";
-import Footer from "@/components/footer";
-import Navbar from "@/components/navbar/navbar";
 import { CaretDownIcon } from "@radix-ui/react-icons";
 import { useContext } from "react";
 import CheckoutItem from "./checkout-item";
@@ -15,7 +13,6 @@ const Page = () => {
   const { cart } = useContext(CartContext);
   return (
     <>
-      <Navbar />
       <Background> Checkout</Background>
       <Wrapper className="md:container mx-auto">
         <div className="lg:grid grid-cols-2 py-9 md:py-16 lg:py-20 gap-x-12 ">
@@ -185,7 +182,6 @@ const Page = () => {
           </div>
         </div>
       </Wrapper>
-      <Footer />
     </>
   );
 };

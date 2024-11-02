@@ -10,6 +10,7 @@ module.exports = {
     extend: {
       colors: {
         text: "#545454",
+        red: "#db1215",
         background: "var(--background)",
         foreground: "var(--foreground)",
       },

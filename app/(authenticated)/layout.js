@@ -2,6 +2,8 @@ import { Albert_Sans } from "next/font/google";
 import "../globals.css";
 import CartItemsContextWrapper from "@/components/context/cartcontext";
 import { Toaster } from "sonner";
+import Navbar from "@/components/navbar/navbar";
+import Footer from "@/components/footer";
 
 const alberSans = Albert_Sans({
   subsets: ["latin"],
@@ -16,7 +18,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={"bg-white text-black " + alberSans.className}>
         <Toaster />
-        <CartItemsContextWrapper>{children}</CartItemsContextWrapper>
+        <CartItemsContextWrapper>
+          <Navbar />
+          {children}
+          <Footer />
+        </CartItemsContextWrapper>
       </body>
     </html>
   );

@@ -13,3 +13,9 @@
     @apply mt-10 mb-4 xl:mt-0 xl:mb-[30px] text-lg;
   }
 }
+
+table,
+td,
+th {
+  border: 1px solid #000;
+}

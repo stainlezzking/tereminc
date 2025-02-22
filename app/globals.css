@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+body {
+  @apply text-black;
+}
+.swiper-slide {
+  display: flex !important;
+}
+
+/* Home page banner image pagination edit */
+.swiper-horizontal > .swiper-pagination-bullets,
+.paginationStyle.swiper-pagination-bullets.swiper-pagination-horizontal {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.paginationStyle.swiper-pagination-bullet {
+  height: 2px;
+  width: 45px;
+  display: block;
+  border-radius: 0;
+  background: #fceceb;
+}
+
+.paginationStyle.swiper-pagination-bullet-active {
+  background: white;
+}
+/* ########### */
+
+@layer components {
+  .pagemargin {
+    @apply px-5 xl:container mx-auto;
+  }
+}

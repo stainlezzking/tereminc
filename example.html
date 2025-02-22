@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>OPTIMUS CLASS</h1>
+    <h2 id="output"></h4>
+    <script>
+        const output = document.getElementById("output");
+
+        const passwordprompt = function(){
+            let password = prompt("Password", null);
+            if(password == "TheMaster") return true
+            if(password) "Wrong password"
+            if(!password) output.innerHTML = "Cancelled"
+            return false
+        };
+
+        (function(){
+            let login = prompt("Identify yourself ?");
+            if(!login) return output.innerHTML = "Cancelled"
+            if(login.toLowerCase() != "admin") return output.innerHTML = "I don't know you";
+            if(passwordprompt()) return output.innerHTML = "Welcome!";
+            passwordprompt();
+        })();
+    </script>
+  </body>
+</html>

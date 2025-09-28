@@ -12,8 +12,13 @@ const Categories = ({ src, children }) => {
 
 export const SubCategories = ({ src, children }) => {
   return (
-    <div className=" grow aspect-[9/10.5] relative">
-      <Image src={subcat.src} fill={true} className="object-cover" alt={children} />
+    <div className=" grow aspect-[9/10.5] relative group overflow-hidden">
+      <Image
+        src={subcat.src}
+        fill={true}
+        className="object-cover group-hover:scale-125 transition-transform duration-100 origin-center"
+        alt={children}
+      />
       <div className="absolute bottom-3 flex justify-center w-full">
         <Catbutton href="#">{children}</Catbutton>
       </div>

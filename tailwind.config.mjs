@@ -6,6 +6,9 @@ export default {
       colors: {
         black: "#353535",
         primary: "#CE625F",
+        sand: {
+          400: "#F9F6F1",
+        },
       },
     },
   },
